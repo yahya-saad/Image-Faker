@@ -1,6 +1,7 @@
 <div align="center">
   <h1>Image Faker </h1>
-  <img src="./public/img/repo-img.png" alt="main image">
+  <img src="./src/public/img/repo-img.png" alt="main image">
+    <br>
     <br>
       <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodejs" />
       <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express" />
