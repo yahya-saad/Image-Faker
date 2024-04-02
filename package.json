@@ -1,0 +1,17 @@
+{
+  "name": "imagefaker",
+  "version": "1.0.0",
+  "description": "ImageFaker lets you make images instantly, and it's totally free! Craft your images on the fly with speed and ease.",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yahya Saad",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.19.2"
+  }
+}

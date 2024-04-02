@@ -1,0 +1,153 @@
+body {
+  min-width: 320px;
+  color: #334155;
+}
+
+header .container {
+  max-width: 100%;
+  background-color: var(--main-clr);
+  color: var(--txt-color);
+  text-align: center;
+  padding: 4.8rem;
+}
+
+header h1 {
+  color: white;
+  font-size: 7.4rem;
+  margin: 1.2rem;
+}
+
+header .quote {
+  font-size: 2.2rem;
+  color: #bbb;
+
+  margin: 3.2rem 0;
+}
+
+header img {
+  max-width: 100%;
+}
+
+header .try {
+  display: block;
+  text-decoration: none;
+  width: 260px;
+  margin: 4.8rem auto;
+  padding: 1.2rem 4.8rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 6px 12px;
+
+  background-color: #3399ff;
+  color: white;
+  transform: all 0.3s;
+}
+
+header .try:hover {
+  scale: 1.05;
+  background-color: #1086fb;
+}
+
+.doc {
+  padding: 4.8rem 0;
+  text-align: center;
+}
+.doc h2,
+.doc h3 {
+  color: var(--main-clr);
+}
+
+.doc h2 {
+  font-size: 4.4rem;
+}
+
+.doc .quote {
+  font-size: 1.8rem;
+  margin-bottom: 4.2rem;
+  margin-top: 0.8rem;
+}
+
+.doc p {
+  font-size: 1.8rem;
+}
+
+.doc .doc-section {
+  font-size: 1.6rem;
+}
+
+.doc-section .heading {
+  font-size: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.doc-section .heading::before {
+  content: "";
+  border-top: 2px solid #eee;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 3.6rem;
+  width: 80%;
+}
+
+.doc-fonts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.6rem;
+}
+
+.doc-fonts a {
+  margin: 0.6rem;
+}
+
+#default {
+  margin-bottom: 1.6rem;
+}
+.contact {
+  background-color: #eee;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.contact h3 {
+  font-size: 4.2rem;
+}
+
+.contact .links {
+  margin-top: 2.2rem;
+}
+.contact .links a {
+  font-size: 2.6rem;
+  color: var(--main-clr);
+  margin-right: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact {
+    background-color: #eee;
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    font-size: 40%;
+  }
+}

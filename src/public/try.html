@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <link rel="Stylesheet" t href="./style/general.css" />
+    <link rel="Stylesheet" t href="./style/try.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Try Now</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="/">
+          <i class="fa-solid fa-image"> </i>
+          <p>Image Faker</p>
+        </a>
+      </div>
+      <a href="https://github.com/yahya-saad/Image-Faker" target="_blank"><i class="fa-brands fa-github"></i> </a>
+    </div>
+
+    <div class="form">
+      <div class="container">
+        <div class="field">
+          <label for="width">Width</label>
+          <input type="number" value="600" id="width" />
+        </div>
+        <div class="field">
+          <label for="heigh">Heigh</label>
+          <input type="number" value="400" id="heigh" />
+        </div>
+
+        <div class="colors">
+          <div class="field">
+            <label for="bg-color">Background Color</label>
+            <input type="color" value="#000000" id="bg-color" />
+          </div>
+
+          <div class="field">
+            <label for="text-color">Text Color</label>
+            <input type="color" value="#ffffff" id="text-color" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="text">Text </label>
+          <input type="text" value="" id="text" />
+        </div>
+
+        <div class="field">
+          <label for="font">Select Font</label>
+          <select id="font">
+            <option value="Roboto">Roboto</option>
+            <option value="Lora">Lora</option>
+            <option value="OpenSans">OpenSans</option>
+            <option value="Oswald">Oswald</option>
+            <option value="PlayfairDisplay">Playfair Display</option>
+            <option value="Raleway">Raleway</option>
+          </select>
+        </div>
+
+        <button id="submit">Create Image</button>
+
+        <div class="output">
+          <div class="link-box">
+            <a href="/600/400/" target="_blank" class="url" id="out-url">https://imgfaker.onrender.com/600/400</a>
+            <a href="#" class="copy tooltip">
+              <span class="tooltip-text">Copy</span>
+              <i class="fa-regular fa-copy"></i>
+            </a>
+          </div>
+          <div class="img-preview">
+            <img src="/600/400" id="out-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">&copy; <span id="year"></span> Copyright, All Rights Reserved</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const copyButtons = document.querySelectorAll(".copy");
+
+        copyButtons.forEach((copyButton) => {
+          copyButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const urlLink = copyButton.previousElementSibling;
+            if (urlLink && urlLink.classList.contains("url")) {
+              const urlText = urlLink.textContent.trim();
+              const tooltipText = copyButton.querySelector(".tooltip-text");
+              navigator.clipboard.writeText(urlText).then(() => {
+                tooltipText.textContent = "Copied";
+                setTimeout(() => {
+                  tooltipText.textContent = "Copy";
+                }, 2000);
+              });
+            }
+          });
+        });
+      });
+
+      const btnSubmit = document.querySelector("#submit");
+
+      btnSubmit.onclick = (e) => {
+        e.preventDefault();
+        const width = document.querySelector("#width");
+        const heigh = document.querySelector("#heigh");
+        const backgroundColor = document.querySelector("#bg-color");
+        const textColor = document.querySelector("#text-color");
+        const text = document.querySelector("#text");
+        const font = document.querySelector("#font");
+
+        const bgValue = backgroundColor.value.replace("#", "");
+        const textValue = textColor.value.replace("#", "");
+        const endpoint = `/${width.value || 600}/${heigh.value || 400}/${bgValue}/${textValue}?text=${
+          text.value || `${width.value}x${heigh.value}`
+        }&font=${font.value}`;
+
+        let url = document.querySelector("#out-url");
+        let image = document.querySelector("#out-image");
+
+        url.href = endpoint;
+        url.innerHTML = `https://imgfaker.onrender.com` + endpoint;
+        image.src = endpoint;
+      };
+
+      document.querySelector("#year").innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>
