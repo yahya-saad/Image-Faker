@@ -1,11 +1,13 @@
 <div align="center">
   <h1>Image Faker </h1>
-  <img src="./public/img/repo-img.png" alt="main image">
+  <img src="./src/public/img/repo-img.png" alt="main image">
+    <br>
     <br>
       <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="nodejs" />
       <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express" />
       <img src="https://img.shields.io/badge/canvas-000000?style=for-the-badge&logoColor=white" alt="express" />
   </div>
+
 
 # Table of Contents
 
@@ -18,6 +20,11 @@
 ### About The Project
 
 ImageFaker lets you make images instantly, and it's totally free! Craft your images on the fly with speed and ease.
+
+
+
+https://github.com/yahya-saad/Image-Faker/assets/68427647/7c91432a-bc66-41f9-8668-c6b28d504928
+
 
 <!-- Documentation -->
 
