@@ -153,4 +153,6 @@ Start the server
   npm start
 ```
 
+### Finally, I'd like to acknowledge the inspiration drawn from placehold.co for this project.
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yahya-saad)
